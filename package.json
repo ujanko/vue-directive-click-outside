@@ -1,0 +1,34 @@
+{
+  "name": "click-outside",
+  "version": "0.0.1",
+  "description": "A Vue click outside directive.",
+  "main": "dist/couner.umd.js",
+  "module": "dist/couner.esm.js",
+  "unpkg": "dist/couner.min.js",
+  "browser": {
+    "./src": "src/click-outside.js"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/clikc-outside.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/click-outside.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/click-outside.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JWT-WWIT/vue-directive-click-outside.git"
+  },
+  "keywords": [
+    "click-outside",
+    "Vue",
+    "directive"
+  ],
+  "author": "Uros Jankovic",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue": "^2.5.16"
+  }
+}
